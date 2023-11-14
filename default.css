@@ -65,6 +65,9 @@ color:#0090FF;
   background: #E9F6FD;
   padding: 12px;
 }
+.back_notice {
+    color: #ff0000;
+}
 .back:hover { 
     background-color: #E9F3F9;
 
