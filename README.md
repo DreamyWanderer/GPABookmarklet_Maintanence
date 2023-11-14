@@ -2,6 +2,8 @@
 
 Add a feature to Hcmus Portal, calculate and show your GPA
 
+*Thanks [Lê Trung Sơn](https://www.facebook.com/trungson.le.142) for confirming the correctness of the Bookmarklet!
+
 ## What is this?
 
 This is a forked version of GPABookmarlet utility, which is created by [dtrung98's repository](https://github.com/dtrung98/GPABookmarklet).
