@@ -2,7 +2,7 @@
 
 Add a feature to Hcmus Portal, calculate and show your GPA
 
-*Thanks [Lê Trung Sơn](https://www.facebook.com/trungson.le.142) for confirming the correctness of the Bookmarklet!
+*Thanks [Lê Trung Sơn](https://www.facebook.com/trungson.le.142) for confirming the correctness of the Bookmarklet!*
 
 ## What is this?
 
