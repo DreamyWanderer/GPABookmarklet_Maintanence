@@ -70,6 +70,10 @@ Besides that, I also add some minor modifications to this bookmaklet for ~~my~~ 
 
   ![Feat 6](Figure/Modification_6.png)
 
+## Bugs
+
+- Sometimes enabling the letter/4 grade system causes wrong format. You should re-run the GPABookmarklet to see if that can be fixed.
+
 ## Guideline
 
 - Step 1: You must be a HCMUS Student.
