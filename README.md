@@ -2,7 +2,7 @@
 
 Add a feature to Hcmus Portal, calculate and show your GPA
 
-*Thanks [Lê Trung Sơn](https://www.facebook.com/trungson.le.142) for confirming the correctness of the Bookmarklet!*
+*Thanks [Lê Trung Sơn](https://www.facebook.com/trungson.le.142) for confirming the correctness of the Bookmarklet! Thanks **[vkhuy's repository](https://github.com/vkhuy/GPABookmarklet)** for [this finding](#thcsBug).*
 
 ## What is this?
 
@@ -68,11 +68,15 @@ Besides that, I also add some minor modifications to this bookmaklet for ~~my~~ 
 
   ![Feat 5](Figure/Modification_5.gif)
 
+  <br>
+
 - Enalble "Tính theo học kỳ" option. If you want to calculate for each semester, check this option before go to that semester page and run the GPABookmarklet. Or else unchecking it for calculating otherwise (Bookmarklet remembers this option until you deleted cookies).
 
   ![Feat 6](Figure/Modification_6.png)
 
-- Add "Tin học cơ sở" to list of courses that must not to be included in GPA. Thanks for **[vkhuy's repository](https://github.com/vkhuy/GPABookmarklet)** for this finding.
+  <br>
+
+- <a name="thcsBug"></a> Add "Tin học cơ sở" to list of courses that must not to be included in GPA.
 
 ## Bugs
 
