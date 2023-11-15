@@ -6,7 +6,7 @@ Add a feature to Hcmus Portal, calculate and show your GPA
 
 ## What is this?
 
-This is a forked version of GPABookmarlet utility, which is created by [dtrung98's repository](https://github.com/dtrung98/GPABookmarklet).
+This is a forked version of GPABookmarlet utility, which is created by the execellent [dtrung98's repository](https://github.com/dtrung98/GPABookmarklet). Thank you so much for providing this repository as an open source project!
 
 It has been 4 years since the last updated of original repository, and unfortunately I observed a bug comes from Portal itself which this bookmarklet need to deal with. Although they are not computation bugs (which will be more severe), but they can cause some confusion for user. Recently the portal is receiving frequenly updating, so I think there should be a consistent maintenance for GPABookmarklet to cope with those changings 😢.
 
@@ -92,3 +92,13 @@ Besides that, I also add some minor modifications to this bookmaklet for ~~my~~ 
 ````
 https://dreamywanderer.github.io/GPABookmarklet_Maintanence/
 ````
+
+## Bugs Report and Suggestions
+
+Please go to [issues](https://github.com/DreamyWanderer/GPABookmarklet_Maintanence/issues) pages and provide those information. It will be great if you can assign them a suitable label as well!
+
+## Licenses and Derivative Works
+
+You are free to fork and modify this boormarklet (as well as other source code file belong to this project) under the GNU GPL 3.0 license. Basically you can do anything, as long as you provide suitable attribution to all previous authors that create the version you are working on.
+
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Contents, site designs </span> by <span property="cc:attributionName">dtrung98, DreamyWanderer</span> is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p>
