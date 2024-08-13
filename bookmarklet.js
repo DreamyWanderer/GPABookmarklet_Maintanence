@@ -161,19 +161,31 @@ javascript: (async function gpa() {
 
     function addSupplementaryGrade()
     {
-        let supplementaryGrade = [
-            { score: 9, letter: "A+", fourRounding: 4.0},
-            { score: 8, letter: "A.", fourRounding: 3.5},
-            { score: 7, letter: "B+", fourRounding: 3.0},
-            { score: 6, letter: "B.", fourRounding: 2.5},
-            { score: 5, letter: "C.", fourRounding: 2.0},
-            { score: 4, letter: "D+", fourRounding: 1.5},
-            { score: 3, letter: "D.", fourRounding: 1.0},
-            { score: 0, letter: "F.", fourRounding: 0.0}
+        let supplementaryGrade = [];
+        const grades = [
+            { minScore: 9, letter: "A+", fourRounding: 4.00 },
+            { minScore: 8, letter: "A.", fourRounding: 3.50 },
+            { minScore: 7, letter: "B+", fourRounding: 3.00 },
+            { minScore: 6, letter: "B.", fourRounding: 2.50 },
+            { minScore: 5, letter: "C.", fourRounding: 2.00 },
+            { minScore: 4, letter: "D+", fourRounding: 1.50 },
+            { minScore: 3, letter: "D.", fourRounding: 1.00 },
+            { minScore: 0, letter: "F.", fourRounding: 0.00 }
         ];
 
+        for (let score = 9.0; score >= 3.1; score -= 0.1) {
+            score = toFixed(score)
+            let fourRounding = toFixed((1.0 + (score - 3) * 0.5));
+            let letter = grades.find(grade => score >= grade.minScore).letter;
+
+            supplementaryGrade.push({ score: score, letter: letter, fourRounding: fourRounding });
+        }
+        supplementaryGrade.push({ score: 0, letter: "F.", fourRounding: 0.00 })
+        supplementaryGrade.sort((a, b) => b.score - a.score);
+
+
         data.forEach(item => {
-            if (item.score >= 0) {
+            if (item.score >= 3) {
                 const lowerGrade = supplementaryGrade.find(grade => item.score >= grade.score);
                 const upperGrade = supplementaryGrade.find(grade => item.score < grade.score);
         
@@ -188,6 +200,10 @@ javascript: (async function gpa() {
                     item.letter = "A+";
                     item.fourRounding = 4.0;
                 }
+            } else {
+                // (item.score < 3.0)  -> F.
+                item.letter = "F.";
+                item.fourRounding = 0.0;
             }
         });
 
@@ -337,7 +353,7 @@ javascript: (async function gpa() {
             $(gpaTableBody).append('<tr class="odd"><td class="left ">Điểm trung bình học tập</td><td class="center gpa" id="calGPA">' + toFixed(this.notPassGPA) + '</td></tr>');
             $(gpaTableBody).append('<tr class="even"><td class="left">Tổng tín chỉ đã tích luỹ</td><td class="center gpa" id="calSumCredit">' + this.totalCredits + ' tín chỉ</td></tr>');
             $(gpaTableBody).append('<tr class="odd"><td class="left">Tổng điểm đã tích lũy</td><td class="center gpa" id="sumScore">' + this.totalScores + '</td></tr>');
-            $(gpaTableBody).append('<tr class="even"><td class="left">Sô học phần đã học</td><td class="center gpa" id="sumCourse">' + data.length + ' học phần</td></tr>');
+            $(gpaTableBody).append('<tr class="even"><td class="left">Số học phần đã học</td><td class="center gpa" id="sumCourse">' + data.length + ' học phần</td></tr>');
             $(gpaTableBody).append('<tr class="odd"><td class="left">Số học phần tính trong GPA</td><td class="center gpa" id="sumCalCourse">' + (data.length - this.removedCoursesSize) + ' học phần</td></tr>');
 
             $(parentDiv).prepend(gpaFieldSet);
