@@ -173,7 +173,7 @@ javascript: (async function gpa() {
             { minScore: 0, letter: "F.", fourRounding: 0.00 }
         ];
 
-        for (let score = 9.0; score >= 3.1; score -= 0.1) {
+        for (let score = 9.0; score >= 3.0; score -= 0.1) {
             score = toFixed(score)
             let fourRounding = toFixed((1.0 + (score - 3) * 0.5));
             let letter = grades.find(grade => score >= grade.minScore).letter;
