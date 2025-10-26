@@ -2,9 +2,9 @@ javascript: (async function gpa() {
     console.clear()
 
     const currentHref = window.location.href;
-    const dkhpReg = /.portal([1-9]|)\.hcmus\.edu\.vn\/SinhVien\.aspx\?(.*)pid=211/;
+    const dkhpReg = /.portal(\d?\d|)\.hcmus\.edu\.vn\/SinhVien\.aspx\?(.*)pid=211/;
     if (!currentHref.match(dkhpReg)) {
-        const portalReg = /.portal([1-9]|)\.hcmus\.edu\.vn/;
+        const portalReg = /.portal(\d?\d|)\.hcmus\.edu\.vn/;
         if (currentHref.match(portalReg)) {
             alert("Vui lòng đi tới trang \"Tra cứu Kết quả học tập\" trước");
         } return;
